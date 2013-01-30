@@ -1,0 +1,19 @@
+{
+  "name": "topgear",
+  "version": "1.0",
+  "manifest_version": 2,
+  "permissions": [
+    "tabs", "http://*/*", "https://*/*"
+  ],
+  "description": "Manipulate the DOM when the page is done loading",
+  "background_page": "background.html",
+  "browser_action": {
+    "name": "Manipulate DOM",
+    "icons": ["icon.png"],
+    "default_icon": "icon.png"
+  },
+  "content_scripts": [ {
+    "js": [ "jquery.min.js", "background.js" ],
+    "matches": [ "http://*/*", "https://*/*"]
+  }]
+}
