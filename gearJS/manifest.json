@@ -1,0 +1,22 @@
+{
+  "name": "gearJS",
+  "version": "1.0",
+  "manifest_version": 2,
+  "permissions": [
+    "tabs", "http://*/*", "https://*/*"
+  ],
+  "description": "gearJS",
+  "browser_action": {
+    "name": "Manipulate DOM",
+    "icons": ["images/icon.png"],
+    "default_icon": "images/icon.png",
+    "default_popup": "views/popup.html"
+  },
+  "sandbox": {
+      "pages": [ "views/page.html" ]
+  },
+  "content_scripts": [ {
+    "js": [ "js/jquery.min.js", "js/background.js" ],
+    "matches": [ "http://*/*", "https://*/*"]
+  }]
+}

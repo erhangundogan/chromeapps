@@ -9,6 +9,7 @@
     "48" : "sample-48.png",
     "128" : "sample-128.png"
   },
+  "manifest_version": 2,
   "content_scripts": [
     {
       "matches": ["http://news.google.com/*"],
